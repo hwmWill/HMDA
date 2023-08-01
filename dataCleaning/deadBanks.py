@@ -75,5 +75,5 @@ final.rename(columns={'respondent_name':'Lender', 'year':'Year'}, inplace=True)
 
 final[['Lender', 'Year', 'Jumbo_Count', 'Total_Loans', 'Perc_Loans_Jumbo', 'Jumbo_Total', 'Total_Loaned', 'Perc_Loan_Sum_Jumbo',
        'Jumbo_Median_Income', 'Conforming_Median_Income', 'Jumbo_Median_Property_Value', 'Conforming_Median_Property_Value', 
-       'Jumbo_Median_Interest_Rate', 'Conforming_Median_Interest_Rate', 'Jumbo_Median_Interest_Rate', 'Conforming_Median_Interest_Rate']]\
+       'Jumbo_Median_Interest_Rate', 'Conforming_Median_Interest_Rate', 'Jumbo_Median_Rate_Spread', 'Conforming_Median_Rate_Spread']]\
        .to_excel('../cleanedData/DeadBanks.xlsx', index=False)
