@@ -78,8 +78,8 @@ This step cleaned up query results and created the final spreadsheets used in th
 <ul>
     <li><a href="./dataCleaning/byYear.py" target="_blank">Jumbo by Year</a></li>
     <li><a href="./dataCleaning/byCensusTract.py" target="_blank">Jumbo by State</a></li>
-    <li><a href="./dataCleaning/byLender.py" target="_blank"></a>Jumbo by Lender</li>
-    <li><a href="./dataCleaning/deadBanks.py" target="_blank"></a>First Republic and Silicon Valley</li>
+    <li><a href="./dataCleaning/byLender.py" target="_blank">Jumbo by Lender</a></li>
+    <li><a href="./dataCleaning/deadBanks.py" target="_blank">First Republic and Silicon Valley</a></li>
 </ul>
 
 <a href="#top">Return to top</a>
