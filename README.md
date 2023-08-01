@@ -63,7 +63,7 @@ In each of these queries, whether a loan was labeled "jumbo" was determined base
 
 <h4>Jumbo loans by lender 2022</h4>
 
-<a href="./queries/totalsByLEI.sql" target="_blank">This query (leiAgain.sql)</a> retrieves the respondent name, total amount of money loaned and number of loans made in 2022 for jumbo and conforming loans, grouped by legal entity identifier and jumbo/conforming.
+<a href="./queries/totalsByLEI.sql" target="_blank">This query</a> retrieves the respondent name, total amount of money loaned and number of loans made in 2022 for jumbo and conforming loans, grouped by legal entity identifier and jumbo/conforming.
 
 <h4>Jumbo loans by First Republic and Silicon Valley banks</h4>
 
