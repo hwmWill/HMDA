@@ -12,12 +12,12 @@ for lender in lenders:
             pd.concat(
                 [lender_pc_jumbo,
                  pd.DataFrame(dict(zip(
-                             ['lei', 'Perc_Loans_Jumbo'],
-                             [lender,
-                              grouped.loc[(lender, True), ['loans', 'amount_loaned']].div(
-                                (grouped.loc[(lender, False), ['loans', 'amount_loaned']] + grouped.loc[(lender, True), ['loans', 'amount_loaned']]))]
-                            ))
-                     )])
+                    ['lei', 'Perc_Loans_Jumbo'],
+                    [lender,
+                    grouped.loc[(lender, True), ['loans', 'amount_loaned']].div(
+                    (grouped.loc[(lender, False), ['loans', 'amount_loaned']] + grouped.loc[(lender, True), ['loans', 'amount_loaned']]))]
+                    ))
+                )])
     except KeyError:
         pass
 
