@@ -1,7 +1,15 @@
-# HMDA
+<h1>HMDA</h1>
 Repository for working with Home Mortgage Disclosure Act data.
 
-## Data sources
+<ul id="top">
+    <li><a href="#sources">Data sources</a></li>
+    <li><a href="acquisition">Data acquisition</a></li>
+    <li><a href="#joins"></a>Data joining</li>
+    <li><a href="#queries">Data queries</a></li>
+    <li><a href="#cleaning">Data cleaning</a></li>
+</ul>
+
+<h2 id="sources">Data sources</h2>
 
 <img src="./img/Datasets.png" />
 
@@ -13,7 +21,9 @@ Transmittal sheet data provides lenders' names, addresses and legal entity ident
 
 This analysis also relies on the conforming loan limits set each year by the Federal Housing Finance Agency. Annual limits by unit count and county can be found <a href="https://www.fhfa.gov/DataTools/Downloads/Pages/Conforming-Loan-Limit.aspx" target="_blank">here</a>.
 
-## Data acquisition
+<a href="#top">Return to top</a>
+
+<h2 id="acquisition">Data acquisition</h2>
 
 Data was imported into a SQLite database using Python. The notebook used in this step is available <a href="./createSQL.py" target="_blank">here</a>.
 
@@ -23,7 +33,9 @@ When importing TS data, pipes were used as delimiters and a column was added con
 
 Loan limit dataframes were concatenated in their entirety, with a column added for year and columns renamed for easier querying.
 
-## Data joining
+<a href="#top">Return to top</a>
+
+<h2 id="joins">Data joining</h2>
 
 <img src="./img/Joins.png" />
 
@@ -33,24 +45,30 @@ Loan limits were joined based on the first five digits of zero-padded LAR census
 
 Transmittal sheet data was joined based on legal identiy identifier and activity year.
 
-## Data queries
+<a href="#top">Return to top</a>
+
+<h2 id="queries">Data queries</h2>
 
 Queries were run to assess changes in the volume and amount of jumbo loans from 2018-2022, the most active jumbo markets geographically in 2022, the most active jumbo lenders in 2022 and the jumbo lending profiles of First Republic Bank and Silicon Valley Bank.
 
 In each of these queries, whether a loan was labeled "jumbo" was determined based on the mortgaged property's county and number of units and on the year the loan was made. If the loan exceeded its respective limit, it was labeled "jumbo." In a minority of cases, loans were missing census tract data, which are used to find their loan limits. In those instances, the mode by unit-count for the loan's year was substituted.
 
-#### Jumbo loans over time
+<h4>Jumbo loans over time</h4>
 
 <a href="./queries/totalsByYear.sql" target="_blank">This query</a> retrieves the total amount of money loaned, the number of loans made and the number of loan providers each year for jumbo and conforming loans. The query sums loan_amount, counts lei and counts the distinct lei, grouped by year and jumbo/conforming.
 
-#### Jumbo loans by location 2022
+<h4>Jumbo loans by location 2022</h4>
 
 <a href="./queries/totalsByCensusTract.sql" target="_blank">This query</a> retrieves the state abbreviation, total amount of money loaned, number of loans made and number of loan providers in 2022 for jumbo and conforming loans, grouped by census tract and jumbo/conforming.
 
-#### Jumbo loans by lender 2022
+<h4>Jumbo loans by lender 2022</h4>
 
 <a href="./queries/totalsByLEI.sql" target="_blank">This query (leiAgain.sql)</a> retrieves the respondent name, total amount of money loaned and number of loans made in 2022 for jumbo and conforming loans, grouped by legal entity identifier and jumbo/conforming.
 
-#### Jumbo loans by First Republic and Silicon Valley banks
+<h4>Jumbo loans by First Republic and Silicon Valley banks</h4>
 
 <a href="./queries/fr_sv_banks.sql" target="_blank">This query</a> retrieves the respondent name, uyear, loan amount, income, property value, combined loan-to-value ratio, interest rate, rate spread, county-state code, census tract, state and jumbo status for jumbo and conforming loans originated by First Repbulic Bank and Silicon Valley Bank from 2018 to 2022.
+
+<a href="#top">Return to top</a>
+
+<h2 id="cleaning">Data cleaning</h2>
