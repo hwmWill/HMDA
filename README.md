@@ -15,7 +15,7 @@ This analysis also relies on the conforming loan limits set each year by the Fed
 
 ## Data acquisition
 
-Data was imported into a SQLite database using Python. The notebook used in this step is available <a href="" target="_blank">here</a>.
+Data was imported into a SQLite database using Python. The notebook used in this step is available <a href="./createSQL.py" target="_blank">here</a>.
 
 When importing LAR data, 'Exempt' was used as a null value when reading numeric columns in the source data, state_code and applicant_age/co_applicant_age (which are given as age ranges) were imported as strings, and pipes were used as delimiters.
 
