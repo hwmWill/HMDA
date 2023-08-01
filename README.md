@@ -3,8 +3,8 @@ Repository for working with Home Mortgage Disclosure Act data.
 
 <ul id="top">
     <li><a href="#sources">Data sources</a></li>
-    <li><a href="acquisition">Data acquisition</a></li>
-    <li><a href="#joins"></a>Data joining</li>
+    <li><a href="#acquisition">Data acquisition</a></li>
+    <li><a href="#joins">Data joining</a></li>
     <li><a href="#queries">Data queries</a></li>
     <li><a href="#cleaning">Data cleaning</a></li>
 </ul>
