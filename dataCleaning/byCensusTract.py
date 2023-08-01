@@ -29,5 +29,5 @@ state_pc_jumbo = state_pc_jumbo.reset_index()\
                              .rename(columns={'loans':'perc_loans_jumbo', 
                                               'amount_loaned':'perc_loan_sum_jumbo'})
 
-byCensus[['state', 'jumbo', 'loans', 'amount_loaned']].query('jumbo == True').merge(state_pc_jumbo, on='state').drop(columns='jumbo')\
+byCensus[['state', 'jumbo', 'loans', 'amount_loaned']].query('jumbo == True').groupby('state').sum().merge(state_pc_jumbo, on='state').drop(columns='jumbo')\
     .to_excel('../cleanedData/JumboByState2022.xlsx', index=False) 
