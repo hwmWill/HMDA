@@ -73,4 +73,13 @@ In each of these queries, whether a loan was labeled "jumbo" was determined base
 
 <h2 id="cleaning">Data cleaning</h2>
 
+This step cleaned up query results and created the final spreadsheets used in the visualizations.
+
+<ul>
+    <li><a href="./dataCleaning/byYear.py" target="_blank">Jumbo by Year</a></li>
+    <li><a href="./dataCleaning/byCensusTract.py" target="_blank">Jumbo by State</a></li>
+    <li><a href="./dataCleaning/byLender.py" target="_blank"></a>Jumbo by Lender</li>
+    <li><a href="./dataCleaning/deadBanks.py" target="_blank"></a>First Republic and Silicon Valley</li>
+</ul>
+
 <a href="#top">Return to top</a>
