@@ -72,3 +72,5 @@ In each of these queries, whether a loan was labeled "jumbo" was determined base
 <a href="#top">Return to top</a>
 
 <h2 id="cleaning">Data cleaning</h2>
+
+<a href="#top">Return to top</a>
