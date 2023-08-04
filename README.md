@@ -52,7 +52,7 @@ Projects using this dataset include:
 
 <ul>
     <li><a href="./Jumbo/README.md">Jumbo loans 2018-2022</a></li>
-    <li><a href="./HBSC/README.md">HSBC redlining</a></li>
+    <li><a href="./HSBC/README.md">HSBC redlining</a></li>
 </ul>
 
 <a href="#top">Return to top</a>

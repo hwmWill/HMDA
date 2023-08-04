@@ -1,4 +1,4 @@
-<h1>HMDA</h1>
+<h1>HSBC redlining</h1>
 Exploration of HSBC loan applications based on announced investigation into alleged redlining behavior.
 
 <ul id="top">
@@ -7,10 +7,6 @@ Exploration of HSBC loan applications based on announced investigation into alle
 </ul>
 
 <h2 id="queries">Data queries</h2>
-
-TBA
-
-<h4>Jumbo loans over time</h4>
 
 TBA
 
